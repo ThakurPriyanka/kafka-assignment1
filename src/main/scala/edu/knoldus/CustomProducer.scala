@@ -17,7 +17,7 @@ class CustomProducer {
     val log = Logger.getLogger(this.getClass)
     props.put("bootstrap.servers", "localhost:9092")
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-    props.put("value.serializer", "util.PersonSerializer")
+    props.put("value.serializer", "edu.knoldus.utils.PersonSerializer")
 
     val producer = new KafkaProducer[String, Person](props)
     val topic = "test"

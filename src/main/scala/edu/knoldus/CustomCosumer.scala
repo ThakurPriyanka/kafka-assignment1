@@ -7,13 +7,14 @@ import org.apache.log4j.Logger
 
 import scala.collection.JavaConverters._
 
+
 class CustomConsumer {
   val log = Logger.getLogger(this.getClass)
   def readToKafka(topic: String) = {
     val props = new Properties()
     props.put("bootstrap.servers", "localhost:9092")
     props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
-    props.put("value.deserializer", "util.PersonSerializer")
+    props.put("value.deserializer", "edu.knoldus.utils.PersonDeserializer")
     props.put("group.id", "something")
     props.put("auto.offset.reset", "earliest")
     props.put("enable.auto.commit", "false ")

@@ -1,10 +1,10 @@
-package edu.knoldus.util
+package edu.knoldus.utils
 
-import org.apache.kafka.common.serialization.Deserializer
 import java.io.{ByteArrayInputStream, ObjectInputStream}
 import java.util.Map
 
 import edu.knoldus.Person
+import org.apache.kafka.common.serialization.Deserializer
 
 class PersonDeserializer extends Deserializer[Person]{
 

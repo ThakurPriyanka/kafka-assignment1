@@ -1,11 +1,10 @@
-package edu.knoldus.util
+package edu.knoldus.utils
 
-
-import org.apache.kafka.common.serialization.Serializer
 import java.io.{ByteArrayOutputStream, ObjectOutputStream}
 import java.util
 
 import edu.knoldus.Person
+import org.apache.kafka.common.serialization.Serializer
 
 class PersonSerializer extends Serializer[Person] {
 
